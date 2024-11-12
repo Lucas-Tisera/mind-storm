@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Article } from "../types/article";
 
 interface ArticleCardProps {
@@ -7,9 +8,17 @@ interface ArticleCardProps {
 const ArticleCard = ({ article }: ArticleCardProps) => {
   return (
     <div className="article-card">
-      <h2>{article.title}</h2>
-      <p>{article.category}</p>
-      <a href={`/posts/${article.slug}`}>Leer más</a>
+      <h2 className="article-title">{article.title}</h2>
+      <p className="article-category">{article.category}</p>
+      <p className="article-date">{article.date}</p>
+      <Link
+        href={{
+          pathname: `/posts/${article.slug}`,
+        }}
+        className="article-link"
+      >
+        Leer más...
+      </Link>
     </div>
   );
 };

@@ -1,0 +1,42 @@
+.sidebar {
+  position: fixed;
+  top: 70px;
+  width: 250px;
+  height: 100%;
+  left: 0;
+  background-color: #1b1b1b;
+  color: #a1a1a1a1;
+  .title {
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  ul {
+    height: 100%;
+    width: 100%;
+    a {
+      padding-left: 10px;
+      line-height: 40px;
+      font-size: 14px;
+      display: block;
+      transition: 0.2s;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+    .sub-category {
+      display: none;
+      line-height: 30px;
+      font-size: 14px;
+      padding-left: 30px;
+    }
+    .open {
+      display: block;
+    }
+    .active {
+      color: #ffffff;
+    }
+  }
+}

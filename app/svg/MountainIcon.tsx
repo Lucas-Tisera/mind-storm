@@ -1,5 +1,3 @@
-import { Fragment } from "react";
-
 const MountainIcon = (props: Record<string, string>) => {
   return (
     <svg

@@ -1,0 +1,13 @@
+.welcome-container {
+  height: calc(100vh - 70px);
+
+  .image-wallpaper {
+    width: 100vw;
+    object-fit: cover;
+    height: calc(100vh - 70px);
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+    z-index: -1000;
+  }
+}

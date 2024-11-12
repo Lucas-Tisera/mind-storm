@@ -1,32 +1,18 @@
-import { Article } from "./types/article";
 import { ArticleCard } from "./components/ArticleCard";
-import Sidebar from "./components/Sidebar";
-
-async function fetchArticles(): Promise<Article[]> {
-  // Aquí puedes obtener datos desde una API o una base de datos
-  return [
-    {
-      title: "Cómo empezar con React",
-      slug: "como-empezar-react",
-      category: "React",
-    },
-    {
-      title: "Introducción a JavaScript",
-      slug: "introduccion-javascript",
-      category: "JavaScript",
-    },
-  ];
-}
+import { WelcomeSign } from "./components/WelcomeSign";
+import { getAllPosts } from "./lib/posts";
 
 const Home = async () => {
-  const articles = await fetchArticles();
+  const posts = getAllPosts();
+  const recentPosts = posts.slice(0, 3);
 
   return (
     <main>
-      <h1>Noticias Recientes</h1>
+      <WelcomeSign />
+      <h1 className="home-title">Aqui tienes los ultimos posts:</h1>
       <div className="articles-list">
-        {articles.map((article) => (
-          <ArticleCard key={article.slug} article={article} />
+        {recentPosts.map((post) => (
+          <ArticleCard key={post.slug} article={post} />
         ))}
       </div>
     </main>
