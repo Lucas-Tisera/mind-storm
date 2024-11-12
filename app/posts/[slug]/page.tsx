@@ -6,7 +6,11 @@ import Link from "next/link";
 
 const md = new MarkdownIt();
 
-const Post = async ({ params }: { params: Record<string, string> }) => {
+interface PostParams {
+  // eslint-disable-next-line  @typescript-eslint/no-explicit-any
+  params: any;
+}
+const Post = ({ params }: PostParams) => {
   const post = getPostBySlug(params.slug);
   if (!post) notFound();
 
