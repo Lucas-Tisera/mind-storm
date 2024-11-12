@@ -4,7 +4,6 @@ const WelcomeSign = () => {
   return (
     <section className="welcome-container">
       <Image src={Welcome} alt="image" className="image-wallpaper" />
-      <h1>BIENVENIDO</h1>
     </section>
   );
 };

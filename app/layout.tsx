@@ -18,7 +18,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Brainstorming Myself",
+  title: "Mind Storm",
   description: "A blog by Lucas tisera",
 };
 
