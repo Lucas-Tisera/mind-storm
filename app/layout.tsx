@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { MainHeader } from "./components/Header/Header";
+import Sidebar from "./components/Sidebar";
+import { Header } from "./components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Travel Solution",
-  description: "Developed by Lucas Tisera",
+  title: "Brainstorming Myself",
+  description: "A blog by Lucas tisera",
 };
 
 export default function RootLayout({
@@ -27,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <MainHeader />
+        <Header />
+        <Sidebar categories={["React", "JavaScript"]} />
         {children}
       </body>
     </html>
