@@ -20,6 +20,18 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Mind Storm",
   description: "A blog by Lucas tisera",
+  icons: {
+    icon: [
+      {
+        url: "/favicon.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Header />
         <div className="main-container">
