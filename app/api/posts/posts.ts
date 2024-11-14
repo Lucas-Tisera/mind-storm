@@ -1,11 +1,10 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import { Article } from "../types/article";
 
 const postsDir = path.join(process.cwd(), "posts");
 
-export const getAllPosts = (): Article[] => {
+export const getAllPosts = () => {
   const fileNames = fs.readdirSync(postsDir);
 
   const posts = fileNames.map((fileName: string) => {
@@ -24,7 +23,7 @@ export const getAllPosts = (): Article[] => {
       category: data.category,
     };
   });
-  return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
+  return posts;
 };
 
 export function getPostBySlug(slug: string) {
@@ -40,9 +39,4 @@ export function getPostBySlug(slug: string) {
     category: data.category,
     content,
   };
-}
-
-export function getPostsByCategory(category: string) {
-  const allPosts = getAllPosts();
-  return allPosts.filter((post) => post.category === category);
 }

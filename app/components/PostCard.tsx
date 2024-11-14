@@ -1,22 +1,22 @@
 "use client";
 import Link from "next/link";
-import { Article } from "../types/article";
+import { Post } from "../types/post";
 import ChevronRight from "../svg/chevronRight.svg";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-interface ArticleCardProps {
-  article: Article;
+interface PostCardProps {
+  post: Post;
 }
 
-const ArticleCard = ({ article }: ArticleCardProps) => {
+const PostCard = ({ post }: PostCardProps) => {
   return (
     <div className="article-card">
       <div>
-        <h2 className="article-title">{article.title}</h2>
+        <h2 className="article-title">{post.title}</h2>
         <div className="article-information">
-          <p className="article-category">{article.category}</p>
-          <p className="article-date">{article.date}</p>
+          <p className="article-category">{post.category}</p>
+          <p className="article-date">{post.created_at}</p>
         </div>
       </div>
       <div className="read-more-container">
@@ -30,12 +30,12 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
         >
           <Link
             href={{
-              pathname: `/posts/${article.slug}`,
+              pathname: `/posts/${post.id}`,
             }}
           >
             <Image
               src={ChevronRight}
-              alt={"read about " + article.slug}
+              alt={"read about " + post.slug}
               className="chevron-right"
             />
           </Link>
@@ -45,4 +45,4 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
   );
 };
 
-export { ArticleCard };
+export { PostCard };

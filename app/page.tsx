@@ -1,10 +1,15 @@
-import { ArticleCard } from "./components/ArticleCard";
+"use client";
+import { PostCard } from "./components/PostCard";
 import { WelcomeSign } from "./components/WelcomeSign";
-import { getAllPosts } from "./lib/posts";
 import { NavigationDown } from "./components/NavigationDown";
+import { useFetchPosts } from "./hooks/useFetchPosts";
 
-const Home = async () => {
-  const posts = getAllPosts();
+const Home = () => {
+  const { posts, loading, error } = useFetchPosts();
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   const recentPosts = posts.slice(0, 3);
   return (
     <main>
@@ -14,7 +19,7 @@ const Home = async () => {
         <h2 className="home-title">Aqui tienes los ultimos posts:</h2>
         <div className="articles-list">
           {recentPosts.map((post) => (
-            <ArticleCard key={post.slug} article={post} />
+            <PostCard key={post.id} post={post} />
           ))}
         </div>
       </section>

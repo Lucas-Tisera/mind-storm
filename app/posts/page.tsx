@@ -1,9 +1,14 @@
+"use client";
 import Link from "next/link";
-import { getAllPosts } from "../lib/posts";
-
+import { useFetchPosts } from "../hooks/useFetchPosts";
 const Post = () => {
   const searchTerm = "";
-  const posts = getAllPosts();
+
+  const { posts, loading, error } = useFetchPosts();
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   const filteredPosts = posts.filter(
     (post) =>
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -16,22 +21,24 @@ const Post = () => {
       <ul className="posts-list">
         {filteredPosts
           ? filteredPosts.map((post) => (
-              <li key={post.slug} className="post-item">
-                <Link href={`/posts/${post.slug}`}>
+              <li key={post.id} className="post-item">
+                <Link href={`/posts/${post.id}`}>
                   <h2>{post.title}</h2>
                 </Link>
                 <p className="post-meta">
-                  {post.date} | By {post.author} | Category: {post.category}
+                  {post.created_at} | By {post.author} | Category:{" "}
+                  {post.category}
                 </p>
               </li>
             ))
           : posts.map((post) => (
               <li key={post.slug} className="post-item">
-                <Link href={`/posts/${post.slug}`}>
+                <Link href={`/posts/${post.id}`}>
                   <h2>{post.title}</h2>
                 </Link>
                 <p className="post-meta">
-                  {post.date} | By {post.author} | Category: {post.category}
+                  {post.created_at} | By {post.author} | Category:{" "}
+                  {post.category}
                 </p>
               </li>
             ))}

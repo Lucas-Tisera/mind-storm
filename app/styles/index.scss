@@ -11,6 +11,7 @@ main {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  width: 100%;
   .recent-posts-container {
     width: 70%;
     align-self: center;

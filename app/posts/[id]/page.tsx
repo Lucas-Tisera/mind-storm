@@ -1,7 +1,9 @@
-import { getPostBySlug } from "@/app/lib/posts";
+"use client";
 import { notFound } from "next/navigation";
 import MarkdownIt from "markdown-it";
 import { NavigationBack } from "@/app/components/NavigationBack";
+import { useFetchPostById } from "@/app/hooks/useFetchPostById";
+import { use } from "react";
 
 const md = new MarkdownIt();
 
@@ -10,7 +12,12 @@ interface PostParams {
   params: any;
 }
 const Post = ({ params }: PostParams) => {
-  const post = getPostBySlug(params.slug);
+  const { id } = use(params);
+  const { post, loading, error } = useFetchPostById(id);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
+
   if (!post) notFound();
 
   const htmlConverter = md.render(post.content);
@@ -21,7 +28,7 @@ const Post = ({ params }: PostParams) => {
       <div className={"post-container"}>
         <h1 className={"post-title"}>{post.title}</h1>
         <p className={"post-meta"}>
-          <span>By {post.author}</span> | <span>{post.date}</span>
+          <span>By {post.author}</span> | <span>{post.created_at}</span>
         </p>
         <article
           className={"post-content"}

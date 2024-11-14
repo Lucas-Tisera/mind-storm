@@ -1,9 +1,9 @@
 "use client";
 import Link from "next/link";
-import { Article } from "../types/article";
+import { Post } from "../types/post";
 import { motion } from "motion/react";
 
-const CurrentPosts = (post: Article) => {
+const CurrentPosts = (post: Post) => {
   return (
     <motion.div
       whileHover={{ y: -20 }}
@@ -13,10 +13,10 @@ const CurrentPosts = (post: Article) => {
     >
       <h2 className="article-title">{post.title}</h2>
       <p className="article-category">{post.category}</p>
-      <p className="article-date">{post.date}</p>
+      <p className="article-date">{post.created_at}</p>
       <Link
         href={{
-          pathname: `/posts/${post.slug}`,
+          pathname: `/posts/${post.id}`,
         }}
         className="article-link"
       >
