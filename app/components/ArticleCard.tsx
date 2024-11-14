@@ -35,7 +35,7 @@ const ArticleCard = ({ article }: ArticleCardProps) => {
           >
             <Image
               src={ChevronRight}
-              alt="Leer mas"
+              alt={"read about " + article.slug}
               className="chevron-right"
             />
           </Link>
