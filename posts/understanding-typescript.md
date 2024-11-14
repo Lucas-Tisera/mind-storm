@@ -1,6 +1,6 @@
 ---
 title: "Understanding TypeScript: A Comprehensive Guide"
-date: "2024-11-12"
+date: "2024-11-11"
 author: "Lucas Tisera"
 category: "JavaScript"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Understanding Redux for State Management in React Applications"
-date: "2024-11-12"
+date: "2024-11-09"
 author: "Lucas Tisera"
 category: "React"
 ---
