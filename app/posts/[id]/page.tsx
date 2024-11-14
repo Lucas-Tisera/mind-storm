@@ -12,8 +12,8 @@ interface PostParams {
   params: any;
 }
 const Post = ({ params }: PostParams) => {
-  const { id } = use(params);
-  const { post, loading, error } = useFetchPostById(id);
+  const { id } = use<{ id: string }>(params);
+  const { post, loading, error } = useFetchPostById(parseInt(id));
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
