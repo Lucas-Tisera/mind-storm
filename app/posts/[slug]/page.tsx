@@ -1,8 +1,7 @@
 import { getPostBySlug } from "@/app/lib/posts";
 import { notFound } from "next/navigation";
 import MarkdownIt from "markdown-it";
-import { BackIcon } from "@/app/svg/BackIcon";
-import Link from "next/link";
+import { NavigationBack } from "@/app/components/NavigationBack";
 
 const md = new MarkdownIt();
 
@@ -18,9 +17,7 @@ const Post = ({ params }: PostParams) => {
 
   return (
     <>
-      <Link href={"/posts"} className="go-back">
-        <BackIcon />
-      </Link>
+      <NavigationBack />
       <div className={"post-container"}>
         <h1 className={"post-title"}>{post.title}</h1>
         <p className={"post-meta"}>

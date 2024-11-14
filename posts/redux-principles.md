@@ -1,7 +1,7 @@
 ---
 title: "Understanding Redux for State Management in React Applications"
 date: "2024-11-12"
-author: "Lucas Sánchez"
+author: "Lucas Tisera"
 category: "React"
 ---
 
