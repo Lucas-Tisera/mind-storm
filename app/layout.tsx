@@ -18,8 +18,22 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mind Storm",
-  description: "A blog by Lucas tisera",
+  title: "Mind Storm - Aprende y Evoluciona",
+  description:
+    "Explora 'Mind Storm', donde comparto conocimientos y aprendizajes de desarrollo web, tecnología, y productividad.",
+  keywords: [
+    "Mind Storm",
+    "blog de aprendizaje",
+    "desarrollo web",
+    "tecnología",
+    "productividad",
+    "Next.js",
+    "TypeScript",
+    "SaaS",
+    "software",
+    "programación",
+  ],
+  authors: [{ name: "Lucas" }],
   icons: {
     icon: [
       {

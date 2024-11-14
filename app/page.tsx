@@ -11,7 +11,7 @@ const Home = async () => {
       <NavigationDown />
       <WelcomeSign />
       <section id="latests" className="recent-posts-container">
-        <h1 className="home-title">Aqui tienes los ultimos posts:</h1>
+        <h2 className="home-title">Aqui tienes los ultimos posts:</h2>
         <div className="articles-list">
           {recentPosts.map((post) => (
             <ArticleCard key={post.slug} article={post} />

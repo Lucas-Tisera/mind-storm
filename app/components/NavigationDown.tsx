@@ -16,7 +16,7 @@ const NavigationDown = () => {
       className="chevron-container"
     >
       <Link href={"#latests"} scroll>
-        <Image src={Chevron} alt="image" className="chevron" />
+        <Image src={Chevron} alt="navigate-down" className="chevron" />
       </Link>
     </motion.div>
   );
