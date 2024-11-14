@@ -1,8 +1,8 @@
 "use client";
-import { MountainIcon } from "@/app/svg/MountainIcon";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import Logo from "./Logo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,11 +12,7 @@ const Header = () => {
   };
   return (
     <nav className="navbar">
-      <div className="logo">
-        <Link className="flex items-center justify-center" href="/">
-          <MountainIcon className="h-6 w-6" />
-        </Link>
-      </div>
+      <Logo />
       <div className={`search-bar ${path !== "/posts" ? "deactivated" : ""}`}>
         <input type="text" placeholder="Buscar..." />
       </div>

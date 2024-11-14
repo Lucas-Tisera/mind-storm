@@ -1,5 +1,33 @@
 .welcome-container {
   height: calc(100vh - 70px);
+  user-select: none;
+  .info-content {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 55px;
+    div {
+      margin-top: 15%;
+      .title {
+        font-size: 96px;
+        letter-spacing: -3px;
+      }
+      .subtitle {
+        font-size: 24px;
+        letter-spacing: 3px;
+        font-style: italic;
+      }
+    }
+    .image {
+      margin-top: 100px;
+      width: auto;
+      height: 500px;
+      z-index: -10;
+    }
+  }
 
   .image-wallpaper {
     width: 100vw;

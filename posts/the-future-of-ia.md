@@ -1,7 +1,7 @@
 ---
 title: "Artificial Intelligence: A Deep Dive into the Present and Future of Technology"
 date: "2024-11-12"
-author: "Lucas"
+author: "Lucas Tisera"
 category: "Artificial Intelligence"
 ---
 
