@@ -21,26 +21,30 @@ const Post = () => {
       <ul className="posts-list">
         {filteredPosts
           ? filteredPosts.map((post) => (
-              <li key={post.id} className="post-item">
-                <Link href={`/posts/${post.id}`}>
-                  <h2>{post.title}</h2>
-                </Link>
-                <p className="post-meta">
-                  {post.created_at} | By {post.author} | Category:{" "}
-                  {post.category}
-                </p>
-              </li>
+              <Link
+                href={`/posts/${post.id}`}
+                key={post.slug}
+                className="post-item"
+              >
+                <h2>{post.title}</h2>
+                <div>
+                  <p className="post-meta">{post.created_at}</p>
+                  <p className="post-meta">Category: {post.category}</p>
+                </div>
+              </Link>
             ))
           : posts.map((post) => (
-              <li key={post.slug} className="post-item">
-                <Link href={`/posts/${post.id}`}>
-                  <h2>{post.title}</h2>
-                </Link>
-                <p className="post-meta">
-                  {post.created_at} | By {post.author} | Category:{" "}
-                  {post.category}
-                </p>
-              </li>
+              <Link
+                href={`/posts/${post.id}`}
+                key={post.slug}
+                className="post-item"
+              >
+                <h2>{post.title}</h2>
+                <div>
+                  <p className="post-meta">{post.created_at}</p>
+                  <p className="post-meta">Category: {post.category}</p>
+                </div>
+              </Link>
             ))}
       </ul>
     </div>

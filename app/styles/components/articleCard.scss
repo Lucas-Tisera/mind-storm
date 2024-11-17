@@ -12,7 +12,7 @@ $box-shadow: -3px -3px 7px rgba(
   border-radius: 25px;
   padding: 35px;
   display: flex;
-  min-height: 250px;
+  min-height: 400px;
   height: fit-content;
   flex-direction: column;
   justify-content: space-between;
@@ -24,10 +24,11 @@ $box-shadow: -3px -3px 7px rgba(
   }
   .article-information {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     font-weight: bold;
   }
+
   .read-more-container {
     display: flex;
     flex-direction: column;

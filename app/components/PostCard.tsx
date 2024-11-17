@@ -12,11 +12,11 @@ interface PostCardProps {
 const PostCard = ({ post }: PostCardProps) => {
   return (
     <div className="article-card">
-      <div>
+      <div className="article-title-container">
         <h2 className="article-title">{post.title}</h2>
         <div className="article-information">
-          <p className="article-category">{post.category}</p>
           <p className="article-date">{post.created_at}</p>
+          <p className="article-category">{post.category}</p>
         </div>
       </div>
       <div className="read-more-container">

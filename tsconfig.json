@@ -30,7 +30,8 @@
     "i18n.ts",
     "app/components/AnimatedWelcome.js",
     "app/components/WelcomeSign.js",
-    "app/[locale]/layout.js"
+    "app/[locale]/layout.js",
+    "app/components/C"
   ],
   "exclude": ["node_modules"]
 }
