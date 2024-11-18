@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "posts": "Posts",
+    "search": "Buscar...",
+    "language": "Idioma"
+  },
+  "home": {
+    "slogan": "Una tormenta de ideas para impulsar el conocimiento",
+    "latestPosts": "Últimos posts:"
+  },
+  "post": {
+    "prefix": "Por"
+  },
+  "error": {
+    "title": "¡Ups! Algo salió mal",
+    "button": "Recargar"
+  }
+}

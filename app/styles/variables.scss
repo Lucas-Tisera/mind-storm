@@ -1,0 +1,79 @@
+/* SCSS HEX */
+$russian-violet: #291f32;
+$celtic-blue: #266dd3ff;
+$tropical-indigo: #8c81ebff;
+$french-gray: #ced3dcff;
+$snow: #fcf7f8ff;
+
+$primary: $russian-violet;
+$secondary: $tropical-indigo;
+$tertiary: $celtic-blue;
+$grey: $french-gray;
+$white: $snow;
+$text-white: #f9f9f9;
+$text-black: #1b1b1b;
+
+$gradient-top: linear-gradient(0deg, $primary, $secondary, $tertiary);
+$gradient-right: linear-gradient(
+  90deg,
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  $primary,
+  $primary,
+  $primary,
+  $secondary,
+  $tertiary
+);
+$gradient-left: linear-gradient(
+  270deg,
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);
+$gradient-radial: radial-gradient(
+  $primary,
+  $secondary,
+  $tertiary,
+  $grey,
+  $snow
+);

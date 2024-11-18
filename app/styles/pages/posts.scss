@@ -1,49 +1,62 @@
-/* styles/PostsPage.module.css */
 .posts-container {
   max-width: 1000px;
-  margin: 0 auto;
   padding: 2rem;
-  background-color: #291f32; /* Fondo oscuro */
-  color: #f9f9f9; /* Texto claro */
+  background-color: #291f32;
+  color: #f9f9f9;
   border-radius: 8px;
+  h1 {
+    margin-bottom: 32px;
+    color: $snow;
+  }
 }
 
 .posts-list {
-  list-style: none;
-  padding: 0;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   gap: 30px;
   margin-top: 20px;
 }
 
 .post-item {
-  margin-bottom: 1.5rem;
-  padding: 1rem;
-  border-radius: 6px;
-  background-color: #83617f; /* Fondo de cada post */
-  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: $snow;
+  transition: 0.2s;
+  color: $text-black;
+  h2 {
+    color: $secondary;
+    font-size: 1.5rem;
+  }
+  .post-resume {
+    padding: 35px 0;
+    color: $text-black;
+    font-size: 1rem;
+  }
+}
+.no-posts-found {
+  text-align: center;
+  width: 100%;
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
 
 .post-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-}
-
-.post-item h2 {
-  font-size: 1.5rem;
-  color: #efcfc5; /* Título de post */
   cursor: pointer;
-  margin: 0;
-}
-
-.post-item h2:hover {
-  color: #ecc5b9; /* Título en hover */
-  text-decoration: underline;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .post-meta {
   font-size: 0.9rem;
-  color: #291f32; /* Color para meta información */
-  margin-top: 0.5rem;
+  margin: 0;
+  font-weight: bold;
+  color: $text-black;
 }

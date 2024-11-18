@@ -1,11 +1,13 @@
+@import "./styles/variables.scss";
+
 :root {
   --background: #ffffff;
   --foreground: #000000;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #291f32;
-    --foreground: #1b1b1b;
+    --background: $primary;
+    --foreground: $text-black;
   }
 }
 html {
@@ -18,8 +20,9 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: $text-black;
+  background: $primary;
+
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

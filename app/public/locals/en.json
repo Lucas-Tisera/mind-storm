@@ -1,0 +1,19 @@
+{
+  "navigation": {
+    "home": "Home",
+    "posts": "Posts",
+    "search": "Search...",
+    "language": "Language"
+  },
+  "home": {
+    "slogan": "A brainstorm to boost knowledge",
+    "latestPosts": "Latest posts:"
+  },
+  "post": {
+    "prefix": "By"
+  },
+  "error": {
+    "title": "Oops! Something went wrong",
+    "button": "Refresh"
+  }
+}
