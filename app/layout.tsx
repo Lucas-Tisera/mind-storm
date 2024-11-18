@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { SearchProvider } from "./contexts/SearchContext";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import Footer from "./components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -68,6 +69,7 @@ export default function RootLayout({
             </div>
           </SearchProvider>
         </LanguageProvider>
+        <Footer />
       </body>
     </html>
   );
