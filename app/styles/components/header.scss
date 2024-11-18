@@ -20,17 +20,24 @@ $box-shadow: -3px -3px 7px rgba(
   z-index: 1000;
   .logo {
     padding: 10px;
-    text-align: center;
+    text-align: left;
     border-radius: 50px;
     font-size: 1.5rem;
     font-weight: bold;
+    width: 33%;
+    .motion {
+      width: fit-content;
+    }
   }
   .nav-links {
     display: flex;
+    justify-content: flex-end;
+    width: 33%;
     gap: 20px;
     li {
       align-self: center;
       list-style-type: none;
+      width: 70px;
     }
     a {
       font-size: 14px;
@@ -53,27 +60,29 @@ $box-shadow: -3px -3px 7px rgba(
       display: flex;
       flex-direction: row;
       align-items: center;
+      width: 200px;
       .language-label {
         align-self: center;
         font-size: 14px;
-        padding: 20px;
         color: #888888;
+        padding: 8px 16px;
         border-radius: 10px;
         background-color: #1b1b1b;
+        width: 100px;
       }
       .language-button {
         background: none;
-        width: 100%;
+        width: fit-content;
         border: none;
       }
     }
   }
   .search-bar {
-    width: 100%;
+    width: 33%;
     display: flex;
     justify-content: center;
     input {
-      width: 25%;
+      width: 100%;
       min-width: 170px;
       padding: 10px;
       font-size: 14px;

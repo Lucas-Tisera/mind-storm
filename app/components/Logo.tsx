@@ -6,14 +6,14 @@ import { motion } from "motion/react";
 
 export default function Logo() {
   return (
-    <motion.div
-      whileHover={{ scale: 1.3 }}
-      whileTap={{ scale: 0.7 }}
-      className="logo"
-    >
-      <Link className="flex items-center justify-center" href="/">
+    <Link className="logo" href="/">
+      <motion.div
+        className="motion"
+        whileHover={{ scale: 1.3 }}
+        whileTap={{ scale: 0.7 }}
+      >
         <MountainIcon className="h-6 w-6" />
-      </Link>
-    </motion.div>
+      </motion.div>
+    </Link>
   );
 }
