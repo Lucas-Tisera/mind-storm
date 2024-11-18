@@ -13,7 +13,6 @@ export async function createPost(title: string, content: string) {
 // Leer todos los posts
 export async function getPosts() {
   const { data, error } = await supabase.from("posts").select("*");
-  console.log(data);
   if (error) throw error;
   return data;
 }

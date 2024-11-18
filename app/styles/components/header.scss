@@ -29,6 +29,7 @@ $box-shadow: -3px -3px 7px rgba(
     display: flex;
     gap: 20px;
     li {
+      align-self: center;
       list-style-type: none;
     }
     a {
@@ -47,6 +48,24 @@ $box-shadow: -3px -3px 7px rgba(
     .selected {
       color: #ffffff;
       box-shadow: $box-shadow;
+    }
+    .language-selector {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .language-label {
+        align-self: center;
+        font-size: 14px;
+        padding: 20px;
+        color: #888888;
+        border-radius: 10px;
+        background-color: #1b1b1b;
+      }
+      .language-button {
+        background: none;
+        width: 100%;
+        border: none;
+      }
     }
   }
   .search-bar {

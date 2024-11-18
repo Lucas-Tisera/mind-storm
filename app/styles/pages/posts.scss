@@ -4,6 +4,10 @@
   background-color: #291f32;
   color: #f9f9f9;
   border-radius: 8px;
+  h1 {
+    margin-bottom: 32px;
+    color: $snow;
+  }
 }
 
 .posts-list {
@@ -18,26 +22,41 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 400px;
-  padding: 1rem;
-  border-radius: 6px;
-  background-color: #83617f;
+  padding: 35px;
+  border-radius: 20px;
+  background-color: $snow;
   transition: 0.2s;
-  color: #ecc5b9;
+  color: $text-black;
+  h2 {
+    color: $secondary;
+    font-size: 1.5rem;
+  }
+  .post-resume {
+    padding: 35px 0;
+    color: $text-black;
+    font-size: 1rem;
+  }
+}
+.no-posts-found {
+  text-align: center;
+  width: 100%;
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
 
 .post-item:hover {
   cursor: pointer;
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  color: #efcfc5;
-}
-
-.post-item h2 {
-  font-size: 1.5rem;
 }
 
 .post-meta {
   font-size: 0.9rem;
-  margin: 0.5rem;
-  color: #291f32;
+  margin: 0;
+  font-weight: bold;
+  color: $text-black;
 }

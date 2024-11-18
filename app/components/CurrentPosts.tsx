@@ -2,8 +2,10 @@
 import Link from "next/link";
 import { Post } from "../types/post";
 import { motion } from "motion/react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const CurrentPosts = (post: Post) => {
+  const { language } = useLanguage();
   return (
     <motion.div
       whileHover={{ y: -20 }}
@@ -11,7 +13,7 @@ const CurrentPosts = (post: Post) => {
       whileTap={{ scale: 0.5 }}
       className="article-card"
     >
-      <h2 className="article-title">{post.title}</h2>
+      <h2 className="article-title">{post.title[language]}</h2>
       <p className="article-category">{post.category}</p>
       <p className="article-date">{post.created_at}</p>
       <Link

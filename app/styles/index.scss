@@ -1,12 +1,12 @@
 @import "./components/header.scss";
 @import "./components/sidebar.scss";
-@import "./components/articleCard.scss";
+@import "./components/postCard.scss";
 @import "./components/welcomeSign.scss";
 @import "./components/navigationDown.scss";
 @import "./components/navigationBack.scss";
 @import "./pages/post.scss";
 @import "./pages/posts.scss";
-
+@import "./variables.scss";
 main {
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@ main {
     font-size: 30px;
     margin: 100px 0px;
   }
-  .articles-list {
+  .posts-list {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
