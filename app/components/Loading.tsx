@@ -9,7 +9,7 @@ const Loading = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          min-height: 200px;
+          height: 100vh;
         }
 
         .loading-spinner {
