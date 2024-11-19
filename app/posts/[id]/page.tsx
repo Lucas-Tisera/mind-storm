@@ -21,8 +21,21 @@ const Post = ({ params }: PostParams) => {
   const { post, loading, error } = useFetchPostById(parseInt(id));
   const { locals } = useLanguage();
 
-  if (loading) return <Loading />;
-  if (error) return <Error error={error} />;
+  if (loading) {
+    return (
+      <div className="post-layout" style={{ minHeight: "100vh" }}>
+        <Loading />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="post-layout" style={{ minHeight: "100vh" }}>
+        <Error error={error} />
+      </div>
+    );
+  }
 
   if (!post) notFound();
 
@@ -31,34 +44,27 @@ const Post = ({ params }: PostParams) => {
   return (
     <motion.section
       className="post-layout"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      style={{ minHeight: "100vh" }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
     >
       <motion.div
         className="post-container"
-        initial={{ scale: 0.95 }}
-        animate={{ scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
         <NavigationBack />
-        <motion.div
-          className="post-meta"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
+        <div className="post-meta">
           <span className="author">
             {locals.post.prefix} {post.author}
           </span>
           <span className="date">{post.created_at}</span>
-        </motion.div>
+        </div>
 
-        <motion.article
+        <article
           className="post-content"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
           dangerouslySetInnerHTML={{ __html: htmlConverter }}
         />
       </motion.div>
