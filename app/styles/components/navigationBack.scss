@@ -1,9 +1,14 @@
 .motion-back {
   position: absolute;
-  margin: 20px;
   width: 20px;
   height: 20px;
   .go-back {
     font-size: small;
+  }
+}
+
+@media (max-width: 768px) {
+  .motion-back {
+    margin: 10px;
   }
 }

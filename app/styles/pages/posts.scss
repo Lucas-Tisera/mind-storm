@@ -60,3 +60,26 @@
   font-weight: bold;
   color: $text-black;
 }
+
+@media (max-width: 768px) {
+  .posts-container {
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  .posts-list {
+    grid-template-columns: auto;
+    .post-item {
+      height: 300px;
+      padding: 15px;
+      h2 {
+        font-size: 18px;
+      }
+      .post-resume {
+        padding: 15px 0;
+        font-size: 14px;
+      }
+    }
+  }
+}

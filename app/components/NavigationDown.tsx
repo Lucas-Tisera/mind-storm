@@ -2,11 +2,19 @@
 import Image from "next/image";
 import Chevron from "../svg/chevronDown.svg";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 const NavigationDown = () => {
   return (
     <motion.div
+      animate={{
+        y: [0, -10, 0],
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
       whileHover={{
         scale: 1.3,
       }}

@@ -1,87 +1,209 @@
-/* Contenedor principal del post */
-.post-container {
-  max-width: 1000px;
+@import "../variables";
+
+.post-layout {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 4rem 10rem;
-  line-height: 1.8;
-  background-color: #efcfc5;
+  padding: 2rem;
+  position: relative;
 }
 
-/* Estilo del título */
-h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-  color: #333;
+.post-container {
+  background-color: $snow;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
-/* Información del autor y fecha */
 .post-meta {
   display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: #777;
+  justify-content: flex-end;
+  gap: 2rem;
   margin-bottom: 2rem;
-}
-
-.post-meta span {
-  margin-right: 1rem;
-}
-
-/* Contenido principal del post */
-.post-content {
-  font-size: 1.1rem;
-  color: #444;
-}
-
-/* Subtítulos */
-.post-content h2,
-.post-content h3 {
-  margin-top: 1.5rem;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Enlaces en el contenido */
-.post-content a {
-  color: #1a73e8;
-  text-decoration: underline;
-}
-
-.post-content a:hover {
-  color: #174ea6;
-}
-
-/* Imágenes */
-.post-content img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-
-/* Listas */
-.post-content ul {
-  padding-left: 1.5rem;
-  list-style: disc;
-}
-
-.post-content ol {
-  padding-left: 1.5rem;
-  list-style: decimal;
-}
-
-/* Bloques de código */
-.post-content pre {
-  background-color: #f5f5f5;
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-x: auto;
+  color: $text-black;
   font-size: 0.9rem;
+  flex-wrap: wrap;
+
+  .author,
+  .date {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: 500;
+    width: fit-content;
+  }
 }
 
-.post-content code {
-  background-color: #e9ecef;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
+.post-content {
+  color: $text-black;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $secondary;
+    margin: 0 0 1rem;
+    font-weight: 600;
+    word-wrap: break-word;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 2rem 0;
+  }
+
+  code {
+    background-color: $grey;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+
+  pre {
+    background-color: $grey;
+    padding: 1rem;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  blockquote {
+    border-left: 4px solid $primary;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: lighten($text-black, 20%);
+  }
+
+  ul,
+  ol {
+    margin: 1rem 0 1rem 2rem;
+    padding-right: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    color: $primary;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    word-break: break-all;
+
+    &:hover {
+      border-bottom-color: $primary;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .post-layout {
+    padding: 1rem;
+  }
+
+  .post-container {
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+  }
+
+  .post-meta {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 10px;
+    .author,
+    .date {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+      align-self: flex-end;
+    }
+  }
+
+  .post-content {
+    font-size: 1rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    h4 {
+      font-size: 1.1rem;
+    }
+    h5,
+    h6 {
+      font-size: 1rem;
+    }
+
+    img {
+      margin: 1rem 0;
+    }
+
+    pre,
+    code {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+    }
+
+    ul,
+    ol {
+      margin-left: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .post-layout {
+    padding: 0.5rem;
+  }
+
+  .post-container {
+    padding: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .post-content {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
 }

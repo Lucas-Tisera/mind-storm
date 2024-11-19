@@ -53,3 +53,19 @@ $box-shadow: -3px -3px 7px rgba(
     }
   }
 }
+
+@media (max-width: 1024px) {
+  .post-card {
+    height: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    .post-title {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    .post-resume {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+  }
+}
