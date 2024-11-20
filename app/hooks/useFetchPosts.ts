@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getPosts } from "../services/posts";
 import { Post } from "../types/post";
 import { useLanguage } from "../contexts/LanguageContext";
+import { SortPosts } from "../utils/sortPosts";
 
 const useFetchPosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -38,8 +39,7 @@ const useFetchPosts = () => {
       }
     ),
   }));
-
-  return { posts: transformPosts, loading, error };
+  return { posts: SortPosts(transformPosts), loading, error };
 };
 
 export { useFetchPosts };

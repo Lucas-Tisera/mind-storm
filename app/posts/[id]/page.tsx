@@ -1,6 +1,6 @@
 "use client";
 import { notFound } from "next/navigation";
-import MarkdownIt from "markdown-it";
+import ReactMarkdown from "react-markdown";
 import { NavigationBack } from "@/app/components/NavigationBack";
 import { useFetchPostById } from "@/app/hooks/useFetchPostById";
 import { use } from "react";
@@ -11,7 +11,6 @@ import { motion } from "framer-motion";
 import { CalendarSVG } from "@/app/svg/Calendar";
 import Image from "next/image";
 import AuthorImage from "@/app/svg/author.jpg";
-const md = new MarkdownIt();
 
 interface PostParams {
   // eslint-disable-next-line  @typescript-eslint/no-explicit-any
@@ -40,8 +39,6 @@ const Post = ({ params }: PostParams) => {
   }
 
   if (!post) notFound();
-
-  const htmlConverter = md.render(post.content);
 
   return (
     <motion.section
@@ -76,10 +73,7 @@ const Post = ({ params }: PostParams) => {
           </div>
         </div>
 
-        <article
-          className="post-content"
-          dangerouslySetInnerHTML={{ __html: htmlConverter }}
-        />
+        <ReactMarkdown className="post-content">{post.content}</ReactMarkdown>
       </motion.div>
     </motion.section>
   );
