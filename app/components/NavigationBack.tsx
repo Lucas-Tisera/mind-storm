@@ -5,8 +5,10 @@ import React from "react";
 import { BackIcon } from "../svg/BackIcon";
 import { motion } from "motion/react";
 import { useRouter } from "next/navigation";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const NavigationBack = () => {
+  const { locals } = useLanguage();
   const router = useRouter();
   return (
     <motion.div
@@ -20,6 +22,7 @@ const NavigationBack = () => {
     >
       <Link onClick={() => router.back()} href={"#"} className="go-back">
         <BackIcon />
+        <p>{locals?.post?.back}</p>
       </Link>
     </motion.div>
   );

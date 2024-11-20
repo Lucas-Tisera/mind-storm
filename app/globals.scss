@@ -12,6 +12,7 @@
 }
 html {
   scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
 html,
 body {
@@ -23,7 +24,6 @@ body {
   color: $text-black;
   background: $primary;
 
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

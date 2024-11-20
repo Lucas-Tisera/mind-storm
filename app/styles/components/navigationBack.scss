@@ -1,14 +1,26 @@
 .motion-back {
-  position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 10%;
+  height: 30px;
   .go-back {
-    font-size: small;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .back-icon {
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
 @media (max-width: 768px) {
   .motion-back {
-    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    .go-back {
+      .back-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }

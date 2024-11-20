@@ -13,7 +13,7 @@ $box-shadow: -3px -3px 7px rgba(
   border-radius: 25px;
   padding: 35px;
   display: flex;
-  height: 450px;
+  height: fit-content;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: $box-shadow;
@@ -21,13 +21,13 @@ $box-shadow: -3px -3px 7px rgba(
   .post-title {
     color: $secondary;
     font-size: 24px;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
   .post-resume {
     color: $text-black;
     font-size: 16px;
     line-height: 1.2;
-    margin-bottom: 35px;
+    margin-bottom: 15px;
   }
 
   .read-more-container {
@@ -39,6 +39,14 @@ $box-shadow: -3px -3px 7px rgba(
       flex-direction: column;
       justify-content: space-between;
       font-weight: bold;
+      font-size: 12px;
+      .post-category {
+        width: fit-content;
+        background-color: $secondary;
+        color: $text-white;
+        padding: 5px 10px;
+        border-radius: 10px;
+      }
     }
     .chevron-right {
       align-self: flex-end;
@@ -48,24 +56,20 @@ $box-shadow: -3px -3px 7px rgba(
       padding: 10px;
       transition: 0.3s;
     }
-    .chevron-right:hover {
-      background-color: $tertiary;
-    }
   }
 }
 
 @media (max-width: 1024px) {
   .post-card {
-    height: 300px;
     padding: 20px;
     border-radius: 15px;
     .post-title {
       font-size: 20px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
     .post-resume {
       font-size: 14px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
 }

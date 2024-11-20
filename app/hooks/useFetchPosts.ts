@@ -3,11 +3,13 @@
 import { useState, useEffect } from "react";
 import { getPosts } from "../services/posts";
 import { Post } from "../types/post";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const useFetchPosts = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,11 +29,14 @@ const useFetchPosts = () => {
 
   const transformPosts = posts.map((post) => ({
     ...post,
-    created_at: new Date(post.created_at).toLocaleDateString("es-ES", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }),
+    created_at: new Date(post.created_at).toLocaleDateString(
+      language === "en" ? "en-US" : "es-ES",
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      }
+    ),
   }));
 
   return { posts: transformPosts, loading, error };

@@ -103,9 +103,6 @@ const Header = () => {
               </Link>
             </li>
             <li className="language-selector">
-              <span className="language-label">
-                {locals.navigation?.language}
-              </span>
               <button
                 onClick={() => {
                   setLanguage(language === "en" ? "es" : "en");
@@ -143,9 +140,6 @@ const Header = () => {
               </Link>
             </li>
             <li className="language-selector">
-              <span className="language-label">
-                {locals.navigation?.language}
-              </span>
               <button
                 onClick={() => {
                   setLanguage(language === "en" ? "es" : "en");

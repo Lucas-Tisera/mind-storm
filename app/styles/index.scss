@@ -14,10 +14,14 @@ main {
   overflow: hidden;
   width: 100%;
   .recent-posts-container {
+    display: flex;
+    flex-direction: column;
     width: 70%;
     align-self: center;
   }
   .home-title {
+    align-self: center;
+    width: fit-content;
     color: #f9f9f9;
     font-size: 30px;
     margin: 40px 0px;

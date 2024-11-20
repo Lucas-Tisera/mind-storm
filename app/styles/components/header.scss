@@ -25,6 +25,11 @@ $box-shadow: -3px -3px 7px rgba(
     font-size: 1.5rem;
     font-weight: bold;
     width: 33%;
+    &-link {
+      display: flex;
+      justify-content: flex-start;
+      width: fit-content;
+    }
     .motion {
       width: fit-content;
     }
@@ -61,16 +66,6 @@ $box-shadow: -3px -3px 7px rgba(
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 200px;
-      .language-label {
-        align-self: center;
-        font-size: 14px;
-        color: #888888;
-        padding: 8px 16px;
-        border-radius: 10px;
-        background-color: #1b1b1b;
-        width: 100px;
-      }
       .language-button {
         background: none;
         width: fit-content;
@@ -164,10 +159,6 @@ $box-shadow: -3px -3px 7px rgba(
         padding: 20px 0;
         margin: 10px 0;
         gap: 10px;
-        .language-label {
-          width: fit-content;
-          font-size: 24px;
-        }
         .language-button {
           svg {
             width: 36px;

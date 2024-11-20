@@ -8,7 +8,9 @@ import { Loading } from "@/app/components/Loading";
 import { Error } from "@/app/components/Error";
 import { useLanguage } from "@/app/contexts/LanguageContext";
 import { motion } from "framer-motion";
-
+import { CalendarSVG } from "@/app/svg/Calendar";
+import Image from "next/image";
+import AuthorImage from "@/app/svg/author.jpg";
 const md = new MarkdownIt();
 
 interface PostParams {
@@ -55,12 +57,23 @@ const Post = ({ params }: PostParams) => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <NavigationBack />
         <div className="post-meta">
-          <span className="author">
-            {locals.post.prefix} {post.author}
-          </span>
-          <span className="date">{post.created_at}</span>
+          <NavigationBack />
+          <div className="post-meta-info">
+            <span className="author">
+              <Image
+                src={AuthorImage}
+                alt={post.author}
+                className="author-image"
+              />
+              {locals.post.prefix} {post.author}
+            </span>
+            <span className="date">
+              {" "}
+              <CalendarSVG />
+              {post.created_at}
+            </span>
+          </div>
         </div>
 
         <article

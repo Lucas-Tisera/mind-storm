@@ -7,10 +7,11 @@
   },
   "home": {
     "slogan": "A brainstorm to boost knowledge",
-    "latestPosts": "Latest posts:"
+    "latestPosts": "Latest posts"
   },
   "post": {
-    "prefix": "By"
+    "prefix": "By",
+    "back": "Back"
   },
   "error": {
     "title": "Oops! Something went wrong",

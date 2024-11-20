@@ -7,10 +7,11 @@
   },
   "home": {
     "slogan": "Una tormenta de ideas para impulsar el conocimiento",
-    "latestPosts": "Últimos posts:"
+    "latestPosts": "Últimos posts"
   },
   "post": {
-    "prefix": "Por"
+    "prefix": "Por",
+    "back": "Volver"
   },
   "error": {
     "title": "¡Ups! Algo salió mal",

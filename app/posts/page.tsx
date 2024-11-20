@@ -36,9 +36,9 @@ const Post = () => {
                 <h2>{post.title[language]}</h2>
                 <p className="post-resume">{post.resume[language]}</p>
               </div>
-              <div>
+              <div className="post-meta-container">
                 <p className="post-meta">{post.created_at}</p>
-                <p className="post-meta">Category: {post.category}</p>
+                <p className="post-meta post-category">{post.category}</p>
               </div>
             </Link>
           ))

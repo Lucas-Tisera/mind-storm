@@ -9,8 +9,6 @@ import { useLanguage } from "./contexts/LanguageContext";
 const Home = () => {
   const { posts, loading, error } = useFetchPosts();
   const { locals } = useLanguage();
-  console.log("locals");
-  console.log(locals);
   if (loading) return <Loading />;
   if (error) return <Error error={error} />;
 

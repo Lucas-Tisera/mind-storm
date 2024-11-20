@@ -10,14 +10,19 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Footer from "./components/Footer";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: [
+    {
+      path: "./fonts/Poppins-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Poppins-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -58,7 +63,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
+      </head>
+      <body className={`${geistSans.variable}`}>
         <LanguageProvider>
           <SearchProvider>
             <Header />
@@ -67,9 +80,9 @@ export default function RootLayout({
               <Analytics />
               <SpeedInsights />
             </div>
+            <Footer />
           </SearchProvider>
         </LanguageProvider>
-        <Footer />
       </body>
     </html>
   );
