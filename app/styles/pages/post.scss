@@ -68,7 +68,6 @@
 
 .post-content {
   color: $text-black;
-  line-height: 1.8;
   font-size: 1.1rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -87,15 +86,19 @@
 
   h1 {
     font-size: 2.5rem;
+    line-height: 1.2;
   }
   h2 {
     font-size: 2rem;
+    line-height: 1.2;
   }
   h3 {
     font-size: 1.75rem;
+    line-height: 1.2;
   }
 
   p {
+    line-height: 1.4;
     margin-bottom: 1.5rem;
   }
 
