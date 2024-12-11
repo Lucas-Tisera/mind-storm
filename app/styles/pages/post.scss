@@ -3,7 +3,7 @@
   height: 100%;
   position: fixed;
   width: 1px;
-  right: 25px;
+  right: calc(10% + 5px);
   z-index: -100;
   background-color: grey;
   .scroll-indicator {
@@ -13,7 +13,7 @@
     border-radius: 50%;
     background-color: #255447;
     margin-top: 70px;
-    right: 20;
+    right: 10%;
   }
 }
 .post-layout {
@@ -156,6 +156,9 @@
 }
 
 @media (max-width: 768px) {
+  .scroll-container {
+    display: none;
+  }
   .post-layout {
     padding: 1rem;
   }

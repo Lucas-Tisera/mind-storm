@@ -27,6 +27,7 @@ const PostCard = ({ post }: PostCardProps) => {
           pathname: `/posts/${post.id}`,
         }}
         className="post-card"
+        prefetch={false}
       >
         <div className="post-title-container">
           <h2 className="post-title">{post.title[language]}</h2>
