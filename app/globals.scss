@@ -18,12 +18,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 body {
   color: $text-black;
   background: $primary;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

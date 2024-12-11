@@ -1,5 +1,21 @@
 @import "../variables";
-
+.scroll-container {
+  height: 100%;
+  position: fixed;
+  width: 1px;
+  right: 25px;
+  z-index: -100;
+  background-color: grey;
+  .scroll-indicator {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #255447;
+    margin-top: 70px;
+    right: 20;
+  }
+}
 .post-layout {
   width: 100%;
   max-width: 1200px;

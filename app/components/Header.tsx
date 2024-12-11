@@ -8,8 +8,10 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { EnglandFlag, SpainFlag } from "../svg/Flags";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoClose, IoMenu } from "react-icons/io5";
+import { useScroll } from "../hooks/useScroll";
 
 const Header = () => {
+  const { position } = useScroll();
   const { searchQuery, setSearchQuery } = useSearch();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { locals, language, setLanguage } = useLanguage();
@@ -62,7 +64,15 @@ const Header = () => {
   };
 
   return (
-    <nav className="navbar">
+    <motion.nav
+      className="navbar"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: position.y > 0 || path === "/posts" ? 1 : 0 }}
+      transition={{ duration: 0.3 }}
+      style={{
+        pointerEvents: position.y > 0 || path === "/posts" ? "all" : "none",
+      }}
+    >
       <Logo />
       <div className={`search-bar ${path !== "/posts" ? "deactivated" : ""}`}>
         <motion.input
@@ -180,7 +190,7 @@ const Header = () => {
           </motion.div>
         </AnimatePresence>
       </motion.button>
-    </nav>
+    </motion.nav>
   );
 };
 

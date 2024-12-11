@@ -15,7 +15,7 @@ const Loading = () => {
         .loading-spinner {
           width: 40px;
           height: 40px;
-          border: 3px solid #291f32;
+          border: 3px solid #070707;
           border-top: 3px solid #efcfc5;
           border-radius: 50%;
           animation: spin 1s linear infinite;

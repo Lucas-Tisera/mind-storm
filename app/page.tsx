@@ -6,6 +6,7 @@ import { useFetchPosts } from "./hooks/useFetchPosts";
 import { Loading } from "./components/Loading";
 import { Error } from "./components/Error";
 import { useLanguage } from "./contexts/LanguageContext";
+
 const Home = () => {
   const { posts, loading, error } = useFetchPosts();
   const { locals } = useLanguage();

@@ -4,7 +4,7 @@ $box-shadow: -3px -3px 7px rgba(
     ),
   3px 3px 5px
     rgba(
-      $color: #291f32,
+      $color: #070707,
       $alpha: 0.7,
     );
 
@@ -15,7 +15,8 @@ $box-shadow: -3px -3px 7px rgba(
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #1b1b1b;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(30px);
   color: white;
   z-index: 1000;
   .logo {
@@ -50,7 +51,6 @@ $box-shadow: -3px -3px 7px rgba(
       padding: 8px 16px;
       color: #888888;
       border-radius: 10px;
-      background-color: #1b1b1b;
       text-decoration: none;
       transition: 0.3s;
     }
