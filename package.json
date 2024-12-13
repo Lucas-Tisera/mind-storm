@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.5.2",
     "@supabase/supabase-js": "^2.46.1",
     "@vercel/analytics": "^1.4.0",
     "@vercel/speed-insights": "^1.1.0",
+    "google-one-tap": "^1.0.6",
     "gray-matter": "^4.0.3",
     "motion": "^11.11.15",
     "next": "15.0.2",

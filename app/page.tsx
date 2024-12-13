@@ -6,6 +6,7 @@ import { useFetchPosts } from "./hooks/useFetchPosts";
 import { Loading } from "./components/Loading";
 import { Error } from "./components/Error";
 import { useLanguage } from "./contexts/LanguageContext";
+import OneTapComponent from "./components/GoogleLogin";
 
 const Home = () => {
   const { posts, loading, error } = useFetchPosts();
@@ -21,6 +22,7 @@ const Home = () => {
       <WelcomeSign />
       <section id="latests" className="recent-posts-container">
         <h2 className="home-title">{locals?.home.latestPosts}</h2>
+        <OneTapComponent />
         <div className="posts-list">
           {recentPosts.map((post) => (
             <PostCard key={post.id} post={post} />
