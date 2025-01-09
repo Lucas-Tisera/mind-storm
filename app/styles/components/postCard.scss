@@ -1,4 +1,6 @@
-@import "../variables.scss";
+@use "../variables.scss";
+@use "header";
+
 $box-shadow: -3px -3px 7px rgba(
       $color: #ffffff,
       $alpha: 0.07,
@@ -16,15 +18,15 @@ $box-shadow: -3px -3px 7px rgba(
   height: fit-content;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: $box-shadow;
+  box-shadow: header.$box-shadow;
   background-color: #f9f9f9;
   .post-title {
-    color: $secondary;
+    color: variables.$secondary;
     font-size: 24px;
     margin-bottom: 15px;
   }
   .post-resume {
-    color: $text-black;
+    color: variables.$text-black;
     font-size: 16px;
     line-height: 1.4;
     margin-bottom: 15px;
@@ -42,8 +44,8 @@ $box-shadow: -3px -3px 7px rgba(
       font-size: 12px;
       .post-category {
         width: fit-content;
-        background-color: $secondary;
-        color: $text-white;
+        background-color: variables.$secondary;
+        color: variables.$text-white;
         padding: 5px 10px;
         margin-top: 15px;
         border-radius: 10px;
