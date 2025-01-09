@@ -1,3 +1,5 @@
+@use "../variables";
+
 .posts-container {
   margin-top: 70px;
   max-width: 1000px;
@@ -7,7 +9,7 @@
   border-radius: 8px;
   h1 {
     margin-bottom: 32px;
-    color: $snow;
+    color: variables.$snow;
   }
 }
 
@@ -26,16 +28,16 @@
   height: 100%;
   padding: 35px;
   border-radius: 20px;
-  background-color: $snow;
+  background-color: variables.$snow;
   transition: 0.2s;
-  color: $text-black;
+  color: variables.$text-black;
   h2 {
-    color: $secondary;
+    color: variables.$secondary;
     font-size: 1.5rem;
   }
   .post-resume {
     padding: 15px 0;
-    color: $text-black;
+    color: variables.$text-black;
     font-size: 1rem;
   }
   .post-meta-container {
@@ -47,8 +49,8 @@
       font-size: 12px;
     }
     .post-category {
-      background-color: $secondary;
-      color: $snow;
+      background-color: variables.$secondary;
+      color: variables.$snow;
       padding: 5px 10px;
       border-radius: 10px;
       width: fit-content;
@@ -77,7 +79,7 @@
   font-size: 0.9rem;
   margin: 0;
   font-weight: bold;
-  color: $text-black;
+  color: variables.$text-black;
 }
 
 @media (max-width: 768px) {

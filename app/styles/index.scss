@@ -1,13 +1,14 @@
-@import "./components/header.scss";
-@import "./components/sidebar.scss";
-@import "./components/postCard.scss";
-@import "./components/welcomeSign.scss";
-@import "./components/navigationDown.scss";
-@import "./components/navigationBack.scss";
-@import "./components/footer.scss";
-@import "./pages/post.scss";
-@import "./pages/posts.scss";
-@import "./variables.scss";
+@use "components/header.scss";
+@use "components/sidebar.scss";
+@use "components/postCard.scss";
+@use "components/welcomeSign.scss";
+@use "components/navigationDown.scss";
+@use "components/navigationBack.scss";
+@use "components/footer.scss";
+@use "pages/post.scss";
+@use "pages/posts.scss";
+@use "variables.scss";
+
 main {
   display: flex;
   flex-direction: column;
@@ -26,6 +27,7 @@ main {
     font-size: 30px;
     margin: 40px 0px;
   }
+
   .posts-list {
     display: grid;
     grid-template-columns: auto auto auto;

@@ -1,3 +1,5 @@
+@use "../variables";
+
 .welcome-container {
   display: flex;
   height: 100vh;
@@ -21,10 +23,10 @@
       .title {
         font-size: 96px;
         letter-spacing: -3px;
-        color: $white;
+        color: variables.$white;
       }
       .subtitle {
-        color: $white;
+        color: variables.$white;
 
         min-width: 750px;
         font-size: 24px;

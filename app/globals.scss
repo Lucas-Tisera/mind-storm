@@ -1,4 +1,4 @@
-@import "./styles/variables.scss";
+@use "styles/variables.scss";
 
 :root {
   --background: #ffffff;
@@ -22,8 +22,8 @@ body {
 }
 
 body {
-  color: $text-black;
-  background: $primary;
+  color: variables.$text-black;
+  background: variables.$primary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

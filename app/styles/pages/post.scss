@@ -1,4 +1,5 @@
-@import "../variables";
+@use "sass:color";
+@use "../variables";
 .scroll-container {
   height: 100%;
   position: fixed;
@@ -25,7 +26,7 @@
 }
 
 .post-container {
-  background-color: $snow;
+  background-color: variables.$snow;
   border-radius: 20px;
   padding: 3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -37,7 +38,7 @@
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 2rem;
-  color: $text-black;
+  color: variables.$text-black;
   font-size: 0.9rem;
   flex-wrap: wrap;
   .post-meta-info {
@@ -67,7 +68,7 @@
 }
 
 .post-content {
-  color: $text-black;
+  color: variables.$text-black;
   font-size: 1.1rem;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -78,7 +79,7 @@
   h4,
   h5,
   h6 {
-    color: $secondary;
+    color: variables.$secondary;
     margin: 0 0 1rem;
     font-weight: 600;
     word-wrap: break-word;
@@ -110,7 +111,7 @@
   }
 
   code {
-    background-color: $grey;
+    background-color: variables.$grey;
     border-radius: 4px;
     font-size: 0.9em;
     word-break: break-all;
@@ -118,7 +119,7 @@
   }
 
   pre {
-    background-color: $grey;
+    background-color: variables.$grey;
     padding: 1rem;
     border-radius: 10px;
     overflow-x: auto;
@@ -128,11 +129,11 @@
   }
 
   blockquote {
-    border-left: 4px solid $primary;
+    border-left: 4px solid variables.$primary;
     padding-left: 1rem;
     margin: 1.5rem 0;
     font-style: italic;
-    color: lighten($text-black, 20%);
+    color: color.adjust(variables.$text-black, $lightness: 20%);
   }
 
   ul,
@@ -146,14 +147,14 @@
   }
 
   a {
-    color: $primary;
+    color: #007bff;
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s ease;
     word-break: break-all;
 
     &:hover {
-      border-bottom-color: $primary;
+      border-bottom-color: #007bff;
     }
   }
 }
