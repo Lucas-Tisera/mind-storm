@@ -1,4 +1,4 @@
-import { supabase } from "../lib/supabaseClient";
+import { supabase } from "../login/supabaseClient";
 
 // Crear un nuevo post
 export async function createPost(title: string, content: string) {
