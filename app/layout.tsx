@@ -70,6 +70,7 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        <meta name="google-adsense-account" content="ca-pub-6528930048381549" />
       </head>
       <body className={`${geistSans.variable}`}>
         <LanguageProvider>
