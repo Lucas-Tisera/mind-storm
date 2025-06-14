@@ -14,6 +14,7 @@ const Header = () => {
   const { position } = useScroll();
   const { searchQuery, setSearchQuery } = useSearch();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const { locals, language, setLanguage } = useLanguage();
   const path = usePathname();
 
@@ -67,7 +68,10 @@ const Header = () => {
     <motion.nav
       className="navbar"
       initial={{ opacity: 0 }}
-      animate={{ opacity: position.y > 0 || path === "/posts" ? 1 : 0 }}
+      animate={{
+        opacity:
+          position.y > 0 || path === "/posts" || path === "/login" ? 1 : 0,
+      }}
       transition={{ duration: 0.3 }}
       style={{
         pointerEvents: position.y > 0 || path === "/posts" ? "all" : "none",

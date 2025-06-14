@@ -1,12 +1,14 @@
 @use "components/header.scss";
 @use "components/sidebar.scss";
 @use "components/postCard.scss";
+@use "components/googleButton.scss";
 @use "components/welcomeSign.scss";
 @use "components/navigationDown.scss";
 @use "components/navigationBack.scss";
 @use "components/footer.scss";
 @use "pages/post.scss";
 @use "pages/posts.scss";
+@use "pages/login.scss";
 @use "variables.scss";
 
 main {
